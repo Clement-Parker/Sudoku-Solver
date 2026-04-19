@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.gwctest.sudoku.SudokuController"
+            stylesheets="@styles.css" styleClass="root">
+    <top>
+        <VBox alignment="CENTER" style="-fx-padding: 20;">
+            <Label fx:id="boardLabel" text="Level: 1/20" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        </VBox>
+    </top>
+    <center>
+        <GridPane fx:id="gridPane" styleClass="grid-pane" alignment="CENTER"/>
+    </center>
+    <right>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 30;">
+            <Button text="Auto Solve (Smart)" onAction="#handleAutoSolve" styleClass="action-button"/>
+            <Button text="Next Board" onAction="#handleReset" styleClass="action-button"/>
+        </VBox>
+    </right>
+</BorderPane>

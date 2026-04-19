@@ -1,0 +1,51 @@
+.root {
+    -fx-background-color: #f4f6fa;
+    -fx-font-family: "Arial";
+}
+
+.grid-pane {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 2;
+}
+
+.sudoku-cell {
+    -fx-background-color: white;
+    -fx-font-size: 24px;
+    -fx-alignment: center;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-background-radius: 0;
+}
+
+/* Styling for the original puzzle numbers */
+.sudoku-cell-initial {
+    -fx-text-fill: #34495e;
+    -fx-font-weight: bold;
+}
+
+/* Styling for the numbers the user types in */
+.sudoku-cell-user {
+    -fx-text-fill: #3498db;
+}
+
+.action-button {
+    -fx-background-color: #6c7dd3;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: #5a6ab8;
+
+ .sudoku-cell-error {
+     -fx-text-fill: #e74c3c !important; /* Red for mistakes */
+     -fx-font-weight: bold;
+ }
+
+ .sudoku-cell-solved {
+     -fx-text-fill: #27ae60 !important; /* Green for auto-solved */
+ }
