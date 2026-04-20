@@ -11,16 +11,18 @@
             stylesheets="@styles.css" styleClass="root">
     <top>
         <VBox alignment="CENTER" style="-fx-padding: 20;">
-            <Label fx:id="boardLabel" text="Level: 1/20" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Label fx:id="boardLabel" text="Board: 1/20" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
         </VBox>
     </top>
     <center>
         <GridPane fx:id="gridPane" styleClass="grid-pane" alignment="CENTER"/>
     </center>
     <right>
-        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 30;">
-            <Button text="Auto Solve (Smart)" onAction="#handleAutoSolve" styleClass="action-button"/>
-            <Button text="Next Board" onAction="#handleReset" styleClass="action-button"/>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 40;">
+            <Button text="Killer Sudoku" onAction="#handleToggleMode" styleClass="mode-button"/>
+            <Button text="Auto Solve" onAction="#handleAutoSolve" styleClass="solve-button"/>
+            <Button text="Next Board" onAction="#handleReset" styleClass="reset-button"/>
+            <Label text="Red = u fckd it up" style="-fx-text-fill: #e74c3c; -fx-font-weight: bold;"/>
         </VBox>
     </right>
 </BorderPane>

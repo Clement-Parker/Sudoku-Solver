@@ -1,51 +1,46 @@
-.root {
-    -fx-background-color: #f4f6fa;
-    -fx-font-family: "Arial";
-}
+.root { -fx-background-color: #ecf0f1; }
 
 .grid-pane {
     -fx-background-color: #2c3e50;
-    -fx-padding: 2;
+    -fx-padding: 3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
 }
 
 .sudoku-cell {
     -fx-background-color: white;
-    -fx-font-size: 24px;
+    -fx-font-size: 22px;
     -fx-alignment: center;
-    -fx-pref-width: 50px;
-    -fx-pref-height: 50px;
-    -fx-background-radius: 0;
+    -fx-pref-width: 55px;
+    -fx-pref-height: 55px;
 }
 
-/* Styling for the original puzzle numbers */
-.sudoku-cell-initial {
+.killer-input {
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+    -fx-padding: 10 0 0 0;
+}
+
+.cage-sum-label {
+    -fx-font-size: 11px;
     -fx-text-fill: #34495e;
     -fx-font-weight: bold;
+    -fx-padding: 2 4;
 }
 
-/* Styling for the numbers the user types in */
-.sudoku-cell-user {
-    -fx-text-fill: #3498db;
+.sudoku-cell-initial { -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-background-color: #f9f9f9; }
+.sudoku-cell-user { -fx-text-fill: #2980b9; }
+.sudoku-cell-error { -fx-text-fill: #e74c3c !important; -fx-background-color: #ffeaea !important; }
+.sudoku-cell-solved { -fx-text-fill: #27ae60 !important; }
+
+.solve-button {
+    -fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;
+    -fx-padding: 15 30; -fx-background-radius: 5; -fx-cursor: hand;
 }
-
-.action-button {
-    -fx-background-color: #6c7dd3;
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-padding: 12 24;
-    -fx-background-radius: 8;
-    -fx-cursor: hand;
+.reset-button {
+    -fx-background-color: #34495e; -fx-text-fill: white; -fx-font-weight: bold;
+    -fx-padding: 15 30; -fx-background-radius: 5; -fx-cursor: hand;
 }
-
-.action-button:hover {
-    -fx-background-color: #5a6ab8;
-
- .sudoku-cell-error {
-     -fx-text-fill: #e74c3c !important; /* Red for mistakes */
-     -fx-font-weight: bold;
- }
-
- .sudoku-cell-solved {
-     -fx-text-fill: #27ae60 !important; /* Green for auto-solved */
- }
+.mode-button {
+    -fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-weight: bold;
+    -fx-padding: 15 20; -fx-background-radius: 5; -fx-cursor: hand;
+}
